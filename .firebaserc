@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "shoutcast-web3"
+  },
+  "targets": {
+    "shoutcast-web3": {
+      "hosting": {
+        "jukebox-landing": [
+          "jukebox-landing"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

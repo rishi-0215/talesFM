@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+/* 1) Theme + base */
+:root {
+  --background: #000;
+  --foreground: #fff;
+}
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-poppins: var(--font-poppins);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000;
+    --foreground: #fff;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+.font-poppins {
+  font-family: var(--font-poppins), var(--font-sans), Arial, Helvetica,
+    sans-serif !important;
+}
+/* native smooth can conflict with Lenis */
+html,
+body {
+  scroll-behavior: auto;
+}
+
+/* animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* 2) Base component sizes */
+.rp-heading {
+  font-size: clamp(2.625rem, 5.1vw, 3.9rem);
+  max-width: 952px;
+}
+.rp-desc {
+  font-size: clamp(1.235rem, 1.56vw, 1.365rem);
+  max-width: 896px;
+}
+.rp-card {
+  min-height: 70vh;
+}
+
+/* 3) Tablet ONLY overrides: 810–1000px */
+@media (min-width: 810px) and (max-width: 1000px) {
+  html,
+  body {
+    overflow-x: hidden;
+    touch-action: pan-y;
+    overscroll-behavior-x: none;
+  }
+  .rp-heading {
+    font-size: clamp(3.675rem, 7.14vw, 5.46rem);
+    max-width: 95%;
+  }
+  .rp-desc {
+    font-size: clamp(1.729rem, 2.184vw, 1.911rem);
+    max-width: 90%;
+  }
+  .rp-card {
+    min-height: 35vh;
+  }
+}
+
+/* 4) Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* 1) Theme + base */
+:root {
+  --background: #000;
+  --foreground: #fff;
+}
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-poppins: var(--font-poppins);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000;
+    --foreground: #fff;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+.font-poppins {
+  font-family: var(--font-poppins), var(--font-sans), Arial, Helvetica,
+    sans-serif !important;
+}
+/* native smooth can conflict with Lenis */
+html,
+body {
+  scroll-behavior: auto;
+}
+
+/* animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* 2) Base component sizes */
+.rp-heading {
+  font-size: clamp(2.625rem, 5.1vw, 3.9rem);
+  max-width: 952px;
+}
+.rp-desc {
+  font-size: clamp(1.235rem, 1.56vw, 1.365rem);
+  max-width: 896px;
+}
+.rp-card {
+  min-height: 70vh;
+}
+
+/* 3) Tablet ONLY overrides: 810–1000px */
+@media (min-width: 810px) and (max-width: 1000px) {
+  html,
+  body {
+    overflow-x: hidden;
+    touch-action: pan-y;
+    overscroll-behavior-x: none;
+  }
+  .rp-heading {
+    font-size: clamp(3.675rem, 7.14vw, 5.46rem);
+    max-width: 95%;
+  }
+  .rp-desc {
+    font-size: clamp(1.729rem, 2.184vw, 1.911rem);
+    max-width: 90%;
+  }
+  .rp-card {
+    min-height: 35vh;
+  }
+}
+
+/* 4) Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll var(--animation-duration, 40s) linear infinite;
+  animation-direction: var(--animation-direction, forwards);
+}

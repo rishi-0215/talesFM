@@ -1,0 +1,335 @@
+import { WhyAmericanRadioContent } from "./interfaces";
+import { FAQItem } from "../interfaces";
+
+export const whyAmericanRadioData: WhyAmericanRadioContent = {
+  heading: "Why American Radio Remains Popular Worldwide",
+
+  introduction:
+    "American radio has shaped global entertainment for decades. It is still popular among a large number of people in today's era due to many reasons.",
+
+  subIntro: "Some of them are discussed below:",
+
+  reasons: [
+    {
+      title: "Accessible Content & Global Appeal",
+      description:
+        "American radio stations offer a diverse range of formats from pop music to news talk. It also draws a huge audience across the world because it is free and requires only a single device.",
+    },
+    {
+      title: "Strong Personalities and Local Feel",
+      description:
+        "Even with globalization, listeners value the 'local feel' that American radio provides through local, personable, and, at times, iconic on-air personalities.",
+    },
+    {
+      title: "Convenience and In-Car Usage",
+      description:
+        "69% of the radio listening happens outside the home, especially during commutes, showing its ability to adapt and be relevant in this digital world.",
+    },
+    {
+      title: "Information and Reliability",
+      description:
+        "In the era of misinformation for views and TRP, American radio is seen as a trustworthy, reliable, and quick source for news and emergency updates.",
+    },
+    {
+      title: "Adaptability",
+      description:
+        "Radio has evolved with time, and now it includes new, digital, and online formats, thus allowing it to maintain its reach and engagement in multiple generations.",
+    },
+  ],
+
+  conclusion:
+    "Hence, many reasons are responsible for the popularity of the USA radio stations live, and it continues to attract listeners globally.",
+};
+
+// data/genres.ts
+
+//
+// constants.ts
+export const genres = [
+  {
+    id: 1,
+    label: "Genre 1",
+    title: "Pop & Top 40",
+    icon: "Music",
+    description:
+      "Catchy melodies, verse-chorus structures, and widespread appeal characterize pop music. The Top 40 consists simply of the forty most frequently broadcast songs.",
+    stations: [
+      {
+        name: "KIIS-FM (102.7 FM): Los Angeles, CA (Flagship station for On Air with Ryan Seacrest)",
+      },
+      { name: "Z100 (100.3 FM): New York, NY (Top 40 & Pop)" },
+      { name: "103.5 KTU: New York, NY (Top 40 & Pop)" },
+      { name: "103.5 Kiss FM: Chicago, IL (Top 40 & Pop)" },
+      { name: "107.5 The River: Nashville, TN (Top 40 & Pop)" },
+    ],
+  },
+  {
+    id: 2,
+    label: "Genre 2",
+    title: "Rock & Alternative",
+    icon: "Guitar",
+    description:
+      "Rock and alternative music feature strong guitar riffs, powerful vocals, and a mix of mainstream and indie influences. Alternative rock often experiments with sound while maintaining a modern edge.",
+    stations: [
+      { name: "KROQ (106.7 FM): Los Angeles, CA (Alternative Rock)" },
+      { name: "Q104.3 (WAXQ): New York, NY (Classic Rock)" },
+      { name: "101WKQX: Chicago, IL (Alternative)" },
+      { name: "98 Rock (WIYY): Baltimore, MD (Active Rock)" },
+      { name: "The Buzz (94.5 KTBZ): Houston, TX (Alternative/Rock)" },
+    ],
+  },
+  {
+    id: 3,
+    label: "Genre 3",
+    title: "Hip-Hop & R&B",
+    icon: "Mic2",
+    description:
+      "Hip-Hop and R&B blend rhythmic beats, lyrical flow, and soulful melodies. From classic rap to modern trap and contemporary R&B, this genre dominates urban radio charts.",
+    stations: [
+      { name: "Hot 97 (WQHT): New York, NY (Hip Hop)" },
+      { name: "Power 105.1 (WWPR): New York, NY (Hip Hop & R&B)" },
+      { name: "Real 92.3 (KRRL): Los Angeles, CA (Hip Hop)" },
+      { name: "97.9 The Box (KBBX): Houston, TX (Hip Hop & R&B)" },
+      { name: "V103 (WVEE): Atlanta, GA (R&B)" },
+    ],
+  },
+  {
+    id: 4,
+    label: "Genre 4",
+    title: "Jazz & Blues",
+    icon: "Music2",
+    description:
+      "Jazz and Blues focus on improvisation, expressive melodies, and deep emotional storytelling. From smooth jazz to classic blues, this genre delivers timeless sophistication.",
+    stations: [
+      { name: "WBGO (88.3 FM): Newark, NJ (Jazz)" },
+      { name: "WDCB (90.9 FM): Chicago, IL (Jazz)" },
+      { name: "KJAZZ (88.1 FM): Los Angeles, CA (Jazz & Blues)" },
+      { name: "KUVO (89.3 FM): Denver, CO (Jazz)" },
+      { name: "WWOZ (90.7 FM): New Orleans, LA (Jazz & Blues)" },
+    ],
+  },
+  {
+    id: 5,
+    label: "Genre 5",
+    title: "Country Music",
+    icon: "Guitar",
+    description:
+      "Country music blends storytelling lyrics with acoustic instruments like guitars and fiddles. From classic country to modern country-pop, it reflects heartfelt themes and Southern roots.",
+    stations: [
+      { name: "93Q Country (KKBQ): Houston, TX (Country)" },
+      { name: "99.5 The Wolf (KPLX): Dallas, TX (Country)" },
+      { name: "96.3 KSCS: Dallas, TX (Country)" },
+      { name: "102.5 KNIX: Phoenix, AZ (Country)" },
+      { name: "Big 98 WSIX: Nashville, TN (Country)" },
+    ],
+  },
+  {
+    id: 6,
+    label: "Genre 6",
+    title: "News & Talk Radio",
+    icon: "Radio",
+    description:
+      "News and Talk Radio delivers live news updates, political discussions, interviews, and community-focused programming. It keeps listeners informed and engaged with current events.",
+    stations: [
+      { name: "1010 WINS: New York, NY (All News)" },
+      { name: "KFI (640 AM): Los Angeles, CA (News/Talk)" },
+      { name: "WBBM Newsradio 780: Chicago, IL (News)" },
+      { name: "WFAN (660 AM/101.9 FM): New York, NY (Sports Talk)" },
+      { name: "WBAP (820 AM): Dallas, TX (News/Talk)" },
+    ],
+  },
+  {
+    id: 7,
+    label: "Genre 7",
+    title: "Christian & Gospel",
+    icon: "Heart",
+    description:
+      "Christian and Gospel music focus on faith-based lyrics, inspirational messages, and uplifting melodies. It ranges from contemporary worship to traditional gospel choirs.",
+    stations: [
+      {
+        name: "K-LOVE (KLVE 107.5 FM): Los Angeles, CA (Christian Contemporary)",
+      },
+      { name: "Air1 Radio: Nationwide (Worship Music)" },
+      { name: "WLIB (1190 AM): New York, NY (Gospel)" },
+      { name: "The Gospel Station: Nationwide (Southern Gospel)" },
+      { name: "WYCA Rejoice 102: Chicago, IL (Gospel)" },
+    ],
+  },
+  {
+    id: 8,
+    label: "Genre 8",
+    title: "EDM & Dance",
+    icon: "Zap",
+    description:
+      "EDM and Dance music feature high-energy beats, electronic production, and festival-style drops. From house and techno to trance and club hits, it’s built for movement.",
+    stations: [
+      { name: "103.5 KTU HD2: New York, NY (Dance Hits)" },
+      { name: "Evolution (iHeartRadio): Nationwide (EDM)" },
+      { name: "Pulse 87: New York, NY (Dance)" },
+      { name: "Energy 98: Los Angeles, CA (Dance/EDM)" },
+      { name: "Revolution 93.5: Miami, FL (Dance/EDM)" },
+    ],
+  },
+];
+export const faqData: FAQItem[] = [
+  {
+    question: "What is the most popular radio station in the US?",
+    answer:
+      "The most popular radio stations in the US vary by region and format, but nationally recognized stations include NPR, iHeartRadio stations, and major market leaders like WLTW (New York), KIIS-FM (Los Angeles), and WGN (Chicago). Popularity also depends on the genre—news, talk, or music.",
+  },
+  {
+    question: "Is there FM radio in the USA?",
+    answer:
+      "Yes, FM radio is widely available throughout the USA. There are thousands of FM radio stations broadcasting across the country, covering music, news, talk shows, sports, and more. You can listen via traditional FM receivers or stream them online through apps like Tales FM.",
+  },
+  {
+    question: "How to listen to online radio for free?",
+    answer:
+      "You can listen to online radio for free by downloading a radio streaming app like Tales FM. Simply install the app on your device, browse available stations, and start streaming instantly without any subscription fees or ads.",
+  },
+  {
+    question: "What are the top 10 most listened to radio stations?",
+    answer:
+      "The top 10 most listened to radio stations in the US include a mix of news, talk, and music formats such as NPR stations, iHeartRadio network stations, WLTW (New York), KIIS-FM (Los Angeles), WBEZ (Chicago), and major sports talk stations. Rankings vary by market and listening demographics.",
+  },
+  {
+    question: "Which music genres are popular on US radio?",
+    answer:
+      "Popular music genres on US radio include Pop & Top 40, Country, Rock, Hip-Hop & R&B, Alternative, Classic Rock, Jazz, Blues, and EDM. News & Talk radio formats are also extremely popular across the country.",
+  },
+];
+
+export const heroData = {
+  heading: "Listen to USA Radio Stations Live Online",
+  description: [
+    "Enjoy the sound of American radio no matter where you are in the world. Check out live American stations broadcasting news, talk shows, sports, music, and cultural shows across the United States.",
+    "You can search for your favorite stations from coast to coast, find various genres, and listen seamlessly, regardless of whether you are using a computer or an Android device.",
+  ],
+  subCTA: "Begin listening to the sound of America today.",
+  buttonText: "Download Now",
+};
+
+export const exploreSectionData = {
+  heading: "Explore USA Radio by Genre",
+  paragraphs: [
+    "USA radio is known for its diverse high-energy genres. Whether you are in the mood for listening to pop songs or just want meaningful conversations, there is always a genre that matches your taste.",
+  ],
+  highlightText:
+    "Here are some of the popular American radio genres along with a list of genre-based radio stations:",
+};
+
+export const stations = [
+  {
+    name: "NPR (National Public Radio)",
+    description:
+      "Reaches over 30 million weekly listeners with comprehensive news, analysis, and cultural programming.",
+  },
+  {
+    name: "SiriusXM (Satellite Radio)",
+    description:
+      "Features over 34 million subscribers, offering a vast, curated range of commercial-free music, talk, and sports.",
+  },
+  {
+    name: "WTOP-FM (Washington, D.C.)",
+    description:
+      "The highest-revenue commercial station, specializing in constant, up-to-the-minute local news and traffic.",
+  },
+  {
+    name: "KIIS-FM (Los Angeles)",
+    description:
+      "A premier Top 40 station known for playing current hits and hosting popular, nationally syndicated shows.",
+  },
+  {
+    name: "WFAN (New York City)",
+    description:
+      "The nation’s premier all-sports talk radio station, dominating in sports coverage and talk.",
+  },
+  {
+    name: "WABC (New York City)",
+    description:
+      "A major news/talk radio station focusing on local news, politics, and commentary.",
+  },
+  {
+    name: "American Top 40 (Syndicated)",
+    description:
+      "A widely popular, long-running weekly countdown show focusing on the biggest pop hits.",
+  },
+];
+
+export const cities = [
+  {
+    name: "Dallas",
+    stations: [
+      "KDGE (102.1): Adult Contemporary.",
+      "KPLX (99.5 The Wolf): Country.",
+      "KSCS (96.3): Country.",
+      "KHKS (106.1 Kiss FM): Top 40 & Pop.",
+      "KTCK (1310 AM/96.7 FM): Sports Radio (The Ticket).",
+    ],
+  },
+  {
+    name: "Miami",
+    stations: [
+      "WLYF (101.5 Lite FM): Adult Contemporary.",
+      "WMXJ (102.7 The Beach): Classic Hits.",
+      "WEDR (99.1 Jamz): Urban/Hip Hop & R&B.",
+      "WHYI (Y100): Top 40 & Pop.",
+      "WPOW (Power 96): Rhythmic Top 40/Throwbacks.",
+    ],
+  },
+  {
+    name: "Chicago",
+    stations: [
+      "WVZ (V103): R&B and Soul.",
+      "WLIT (106.7 Lite FM): Adult Contemporary.",
+      "WSCK (103.5 Kiss FM): Top 40 & Pop.",
+      "WGCI (107.5): Hip Hop & R&B.",
+      "WDRV (97.1 The Drive): Classic Rock.",
+    ],
+  },
+  {
+    name: "Los Angeles",
+    stations: [
+      "KIIS-FM (102.7): Top 40 & Pop.",
+      "KOST (103.5): Adult Contemporary.",
+      "KBIG (104.3 MyFM): Hot Adult Contemporary.",
+      "KFI (640 AM): News/Talk.",
+      "KRRL (Real 92.3): Hip Hop & R&B.",
+    ],
+  },
+];
+export const howToStreamData = {
+  heading: "How to Stream American Radio on Any Device",
+  description: [
+    "With Tales FM, seamless streaming of American radio is super easy, whether you want to stream on a desktop or on your phone; our services will not disappoint you.",
+  ],
+  introText:
+    "Here is how you can immerse yourself in the world of American radio:",
+  platforms: [
+    {
+      title: "For Desktop / Web",
+      steps: [
+        "Open the official website of Tales FM.",
+        "Log in by creating an account.",
+        "Choose a station and start listening – without ads.",
+      ],
+    },
+    {
+      title: "For Android",
+      steps: [
+        "Install our application from Google Play Store.",
+        "Log in by creating an account.",
+        "Choose a station and start listening – without ads.",
+      ],
+    },
+  ],
+};
+
+export const startExploringData = {
+  heading: "Start Exploring American Radio",
+  description: [
+    "Discover the varied world of American radio, which offers stations for every interest and mood, including talk shows, sports, news, chart-topping music, classic rock, and cultural programming.",
+    "Listen to American music anywhere, at any time, by streaming live stations right now.",
+  ],
+  buttonText: "Download Now",
+};

@@ -1,0 +1,40 @@
+name: Deploy to Firebase Hosting on merge
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID }}
+      NEXT_PUBLIC_TINA_TOKEN: ${{ secrets.NEXT_PUBLIC_TINA_TOKEN }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create .env.local file
+        run: |
+          # Get branch name without refs/heads/ prefix
+          BRANCH_NAME=${GITHUB_REF#refs/heads/}
+
+          echo "NEXT_PUBLIC_TINA_CLIENT_ID=${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID }}" >> .env.local
+          echo "NEXT_PUBLIC_TINA_TOKEN=${{ secrets.NEXT_PUBLIC_TINA_TOKEN }}" >> .env.local
+          echo "NEXT_PUBLIC_TINA_BRANCH=$BRANCH_NAME" >> .env.local
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project (Tina + Next.js)
+        run: npm run build
+
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_JUKEBOX }}
+          channelId: live
+          projectId: shoutcast-web3

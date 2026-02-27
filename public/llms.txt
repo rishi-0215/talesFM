@@ -1,0 +1,26 @@
+# TalesFM
+
+> Your All-in-one Audio World
+
+Discover, stream, and share your favorite music with the world's most advanced music platform
+
+## Available Pages
+
+### Main Pages
+
+- [Home page](https://talesfm.com/)
+- [About us](https://talesfm.com/about-us)
+- [Blog](https://talesfm.com/blog)
+- [Contact us](https://talesfm.com/contact-us)
+- [Terms of Service](https://talesfm.com/terms)
+- [Privacy Policy](https://talesfm.com/privacy-policy)
+- [Author page](https://talesfm.com/author)
+
+## Contact
+
+- Website: https://talesfm.com
+- Contact Page: https://talesfm.com/contact-us
+
+## Last Updated
+
+This file was last updated on 2026-02-08.

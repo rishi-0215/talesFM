@@ -1,0 +1,43 @@
+{
+  "hosting": [
+    {
+      "site": "jukebox-landing",
+      "public": "out",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "cleanUrls": true,
+      "redirects": [
+        {
+          "source": "/blog/free-alternatives-to-siriusxm-2025",
+          "destination": "/blog/siriusxm-alternatives",
+          "type": 301
+        },
+        {
+          "source": "/blog/siriusxm-vs-tunein-radio-app-comparison",
+          "destination": "/blog/siriusxm-alternatives",
+          "type": 301
+        },
+        {
+          "source": "/blog/siriusxm-alternatives-for-sports-fans",
+          "destination": "/blog/siriusxm-alternatives",
+          "type": 301
+        },
+        {
+          "source": "/blog/why-switch-from-siriusxm",
+          "destination": "/blog/siriusxm-alternatives",
+          "type": 301
+        },
+        {
+          "source": "/blog/budget-friendly-siriusxm-alternatives",
+          "destination": "/blog/siriusxm-alternatives",
+          "type": 301
+        }
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
