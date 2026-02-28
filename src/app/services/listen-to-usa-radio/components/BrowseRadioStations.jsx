@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function BrowseByCity({ cities }) {
+export default function BrowseByCity({ description, heading, cities }) {
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
@@ -18,18 +18,16 @@ export default function BrowseByCity({ cities }) {
   };
 
   return (
-    <section className="bg-black text-white py-16 sm:py-20 md:py-24">
+    <section className="bg-black text-white py-8 sm:py-10 md:py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="max-w-4xl space-y-6 mb-10 md:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
-            Browse Radio Stations by Major US Cities
+            {heading}
           </h2>
 
           <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed">
-            If you are specifically looking for radio stations in your favourite
-            city, based on recent ratings and listener trends, here are the
-            popular ones.
+            {description}
           </p>
         </div>
 

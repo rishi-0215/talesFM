@@ -3,11 +3,11 @@
 export default function HowToStream({ data }) {
   const howToStreamData = data;
   return (
-    <section className="bg-black text-white py-16 sm:py-20 md:py-24">
+    <section className="bg-black text-white py-8 sm:py-10 md:py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="max-w-4xl space-y-8 sm:space-y-10">
+        <div className="max-w-4xl space-y-8 sm:space-y-6">
           {/* Heading + Intro */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
               {howToStreamData.heading}
             </h2>

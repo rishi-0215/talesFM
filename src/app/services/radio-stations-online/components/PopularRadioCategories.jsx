@@ -6,7 +6,7 @@ export default function PopularRadioCategories({ data:popularRadioCategories }) 
     <section className="max-w-9/12 mx-auto">
       <StationList data={popularRadioCategories} />
       <p className="text-lg text-gray-400">
-        Something for every listener — from global hits to local voices.
+        {popularRadioCategories.footer}
       </p>
     </section>
   );

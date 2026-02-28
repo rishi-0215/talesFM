@@ -2,8 +2,6 @@
 
 import { Radio } from "lucide-react";
 
-
-
 export default function ExploreIndianRadioByCategory({
   radioStationsInIndia,
   stations,
@@ -14,29 +12,27 @@ export default function ExploreIndianRadioByCategory({
         {/* Header */}
         <div className="max-w-3xl space-y-6 mb-14">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-            Explore Indian Radio Stations Online by Category
+            {radioStationsInIndia.sectionHeading}
           </h2>
 
           <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed">
-            Some of the popular radio stations online by category are:
+            {radioStationsInIndia.sectionSubtext}
           </p>
 
-          {/* Dynamic Section Title */}
           <p className="text-white font-semibold text-lg">
             {radioStationsInIndia.title.text}
           </p>
 
-          {/* Dynamic Paragraph */}
           <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
             {radioStationsInIndia.paragraphs[0]}
           </p>
 
           <p className="text-white font-semibold">
-            Some popular radio stations across India are:
+            {radioStationsInIndia.popularStationsHeading}
           </p>
         </div>
 
-        {/* Cards Wrapper */}
+        {/* Cards */}
         <div
           className="
             flex gap-6 overflow-x-auto scroll-smooth
@@ -49,20 +45,7 @@ export default function ExploreIndianRadioByCategory({
           {stations.map((station, index) => (
             <div
               key={index}
-              className="
-                group relative
-                min-w-[85%] sm:min-w-[70%] md:min-w-0
-                snap-start
-                rounded-3xl
-                border border-white/10
-                bg-linear-to-br from-white/10 via-white/5 to-transparent
-                backdrop-blur-xl
-                p-8
-                shadow-[0_10px_40px_rgba(0,0,0,0.6)]
-                transition-all duration-500
-                hover:-translate-y-2
-                hover:shadow-[0_20px_60px_rgba(0,0,0,0.8)]
-              "
+              className="group relative min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-start rounded-3xl border border-white/10 bg-linear-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl p-8 shadow-[0_10px_40px_rgba(0,0,0,0.6)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
             >
               <div className="absolute inset-0 rounded-3xl bg-white/5 opacity-30 pointer-events-none" />
 
@@ -73,33 +56,10 @@ export default function ExploreIndianRadioByCategory({
                 </div>
 
                 <div className="space-y-4 text-gray-400 text-sm leading-relaxed">
-                  <div>
-                    <p className="text-gray-500 text-xs uppercase tracking-wider">
-                      Frequency
-                    </p>
-                    <p className="text-white/90">{station.frequency}</p>
-                  </div>
-
-                  <div>
-                    <p className="text-gray-500 text-xs uppercase tracking-wider">
-                      Genre
-                    </p>
-                    <p>{station.genre}</p>
-                  </div>
-
-                  <div>
-                    <p className="text-gray-500 text-xs uppercase tracking-wider">
-                      Languages
-                    </p>
-                    <p>{station.languages}</p>
-                  </div>
-
-                  <div>
-                    <p className="text-gray-500 text-xs uppercase tracking-wider">
-                      Country
-                    </p>
-                    <p>{station.country}</p>
-                  </div>
+                  <Info label="Frequency" value={station.frequency} />
+                  <Info label="Genre" value={station.genre} />
+                  <Info label="Languages" value={station.languages} />
+                  <Info label="Country" value={station.country} />
                 </div>
               </div>
             </div>
@@ -107,5 +67,14 @@ export default function ExploreIndianRadioByCategory({
         </div>
       </div>
     </section>
+  );
+}
+
+function Info({ label, value }) {
+  return (
+    <div>
+      <p className="text-gray-500 text-xs uppercase tracking-wider">{label}</p>
+      <p className="text-white/90">{value}</p>
+    </div>
   );
 }

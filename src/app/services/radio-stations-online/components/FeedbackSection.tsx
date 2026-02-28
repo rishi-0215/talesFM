@@ -4,7 +4,7 @@ import { testimonials } from "../../listen-to-the-world/constants";
 
 export default function FeedbackSection() {
   return (
-    <section className="mt-15">
+    <section className="mt-13">
       <div className="max-w-6xl mt-0 mx-auto">
         <h2 className="text-4xl text-center text-amber-50 mb-6 font-black">
           {" "}

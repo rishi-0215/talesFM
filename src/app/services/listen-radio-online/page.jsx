@@ -9,8 +9,9 @@ import { getListenRadioOnlineContent } from "../../../lib/getListenRadioOnlineCo
 
 export default async function Page() {
   const content = await getListenRadioOnlineContent();
+  console.log(content.faqSectionHeading);
   return (
-    <div>
+    <div className="space-y-18" > 
       <Hero
         heroSectionContent={content.whyStillRadio}
         heroSection={content.indianRadioData}
@@ -21,9 +22,16 @@ export default async function Page() {
         stations={content.stations}
       />
 
-      <IndianRadioByLanguage languages={content.languages} />
+      <IndianRadioByLanguage
+        languageSection={content.languageSection}
+        languages={content.languages}
+      />
 
-      <IndianRadioByCity cities={content.cities} />
+      <IndianRadioByCity
+        citySectionHeading={content.citySectionHeading}
+        citySectionSubtext={content.citySectionSubtext}
+        cities={content.cities}
+      />
 
       <MultiSection
         simpleSteps={content.simpleSteps}
@@ -31,7 +39,7 @@ export default async function Page() {
         nriSection={content.nriSection}
       />
 
-      <FAQSection faqData={content.faq} />
+      <FAQSection heading={content.faqSectionHeading} faqData={content.faq} />
     </div>
   );
 }

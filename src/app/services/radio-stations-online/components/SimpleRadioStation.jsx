@@ -21,7 +21,7 @@ const RadioHero = ({ data }) => {
     window.open(GOOGLE_PLAY_URL, "_blank");
   };
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center p-4">
+    <div className="max-h-screen bg-black flex items-center justify-center p-4">
       <div className="max-w-4xl w-full bg-[#171717] rounded-[40px] border border-[#262626] p-10 md:p-20 text-center shadow-2xl">
         {/* Main Heading */}
         <h1 className="text-white text-3xl md:text-5xl font-bold tracking-tight mb-4">

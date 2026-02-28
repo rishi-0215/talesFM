@@ -34,7 +34,7 @@ export default function RadioStationsHero({ heroData }) {
     window.open(HOME_PAGE_LINk, "_blank");
   };
   return (
-    <section className="relative min-h-screen max-w-100vw bg-black text-white flex items-center justify-center px-6 py-20 overflow-hidden">
+    <section className="relative min-h-screen max-w-100vw bg-black text-white flex items-center justify-center px-6 py-10 overflow-hidden">
       {/* Background Video */}
       <video
         autoPlay
@@ -49,7 +49,7 @@ export default function RadioStationsHero({ heroData }) {
 
       <div className="absolute inset-0 bg-black/50"></div>
 
-      <div className="relative z-10 max-w-5xl mx-auto text-center space-y-8">
+      <div className="relative z-10 max-w-5xl mx-auto text-center space-y-3">
         {/* Main Heading */}
         <h1 className="text-3xl md:text-5xl lg:text-6xl sm:text-4xl font-bold leading-tight">
           {heroData.heading}

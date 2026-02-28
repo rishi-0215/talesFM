@@ -51,15 +51,15 @@ export default function Hero({ data }) {
       <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24">
-        <div className="max-w-3xl space-y-6 sm:space-y-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-10 md:py-12">
+        <div className="max-w-7xl space-y-6 sm:space-y-8">
           {/* Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             {heroData.heading}
           </h1>
 
           {/* Description */}
-          <div className="space-y-4 sm:space-y-6 text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed">
+          <div className="space-y-4 sm:space-y-4 text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed">
             {heroData.description.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}

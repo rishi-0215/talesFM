@@ -17,7 +17,7 @@ export default async function Page() {
   console.log(content);
 
   return (
-    <main className="bg-black text-white">
+    <main className="bg-black text-white space-y-18 ">
       <Hero heroData={content.hero} />
 
       <SectionContainer>
@@ -31,14 +31,14 @@ export default async function Page() {
       </SectionContainer>
 
       <BrowseYourWay data={content.browseRadioStations} />
-      <HowTalesFmWork data={content.howTalesFMWorks} />
+      <HowTalesFmWork  data={content.howTalesFMWorks} />
       <PopularRadioCategories data={content.popularRadioCategories} />
 
       <FeedbackSection />
 
-      <FaqSection faqData={content.faq} />
+      <FaqSection heading={content.faqSectionHeading} faqData={content.faq} />
 
-      <SimpleRadioStation data={content.radioHero}/>
+      <SimpleRadioStation data={content.radioHero} />
     </main>
   );
 }

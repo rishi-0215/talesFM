@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-export default function FAQ({ faqData }) {
+export default function FAQ({ heading,faqData }) {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -11,32 +11,33 @@ export default function FAQ({ faqData }) {
   };
 
   return (
-    // h-dvh (dynamic viewport height) ensures it fills exactly 100% of the mobile screen
-    // flex flex-col allows us to split the space between the title and the list
-    <div className="h-dvh w-full bg-black text-white px-4 py-2 flex flex-col overflow-hidden">
-      <div className="max-w-5xl mx-auto w-full flex flex-col h-full">
+    // min-h-[50vh] ensures it's not too small, but we remove h-dvh 
+    // to prevent forcing it to be 100% height if it doesn't need to be.
+    <div className="w-full bg-black text-white px-4 py-8 flex flex-col items-center">
+      <div className="max-w-5xl mx-auto w-full flex flex-col">
         
-        {/* Header: Fixed height/size */}
-        <h1 className="text-3xl md:text-5xl font-bold text-center mb-4 shrink-0">
-          FAQs
+        <h1 className="text-3xl md:text-5xl font-bold text-center mb-6 shrink-0">
+          {heading}
         </h1>
 
-        {/* Scrollable Container: This takes up the remaining space */}
-        <div className="flex-1 overflow-y-auto pr-2 space-y-3 custom-scrollbar">
+        {/* 1. max-h-[70vh]: Limits the height so it fits on laptop screens.
+          2. overflow-y-auto: Adds a scrollbar ONLY if the list is longer than the screen.
+          3. pr-2: Space for the scrollbar so it doesn't touch the cards.
+        */}
+        <div className="space-y-3 overflow-y-auto max-h-[70vh] pr-2 custom-scrollbar">
           {faqData.map((item, index) => {
             const isOpen = openIndex === index;
 
             return (
               <div
                 key={index}
-                className="border border-zinc-700 rounded-xl overflow-hidden bg-white/5 backdrop-blur-sm transition-all duration-300 hover:border-zinc-600 shrink-0"
+                className="border border-zinc-700 rounded-xl overflow-hidden bg-white/5 backdrop-blur-sm transition-all duration-300 hover:border-zinc-600"
               >
-                {/* Header */}
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full flex items-center justify-between p-4 md:p-6 text-left"
+                  className="w-full flex items-center justify-between p-4 md:p-5 text-left"
                 >
-                  <span className="text-md md:text-xl font-medium pr-4">
+                  <span className="text-md md:text-lg font-medium pr-4">
                     {item.question}
                   </span>
                   <ChevronDown
@@ -46,7 +47,6 @@ export default function FAQ({ faqData }) {
                   />
                 </button>
 
-                {/* Animated Content */}
                 <div
                   className={`grid transition-all duration-500 ease-in-out ${
                     isOpen

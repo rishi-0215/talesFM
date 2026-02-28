@@ -6,14 +6,16 @@ export default function SmarterWay({ data }) {
       <Body data={data.header} />
 
       <div>
-        <h3 className="text-2xl sm:text-3xl font-light mb-10">
-          Here is what we provide:
+        <h3 className="text-2xl  sm:text-3xl font-medium mb-4">
+          {data.text}
         </h3>
       </div>
 
-      {data.providedValues.map((data, i) => (
-        <Body key={i} data={data} />
-      ))}
+      <div className="" >
+        {data.providedValues.map((data, i) => (
+          <Body key={i} data={data} />
+        ))}
+      </div>
     </>
   );
 }

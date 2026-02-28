@@ -4,10 +4,10 @@ export default function WhyAmericanRadio({ data }) {
   const content = data;
 
   return (
-    <section className="bg-black text-white py-16 sm:py-20 md:py-24">
+    <section className="bg-black text-white py-4 sm:py-10 md:py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
-        <div className="max-w-4xl space-y-6 sm:space-y-8">
+        <div className="max-w-4xl space-y-4 sm:space-y-4">
 
           {/* Heading */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">
@@ -25,7 +25,7 @@ export default function WhyAmericanRadio({ data }) {
           </p>
 
           {/* Reasons List */}
-          <ul className="space-y-4 sm:space-y-6">
+          <ul className="space-y-4 sm:space-y-4">
             {content.reasons.map((reason, index) => (
               <li key={index} className="flex items-start gap-2 sm:gap-3">
                 <span className="mt-1 sm:mt-2 text-white shrink-0">•</span>

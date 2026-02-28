@@ -21,9 +21,9 @@ export default function Hero({ heroSection, heroSectionContent }) {
       <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Main Container */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-8 md:py-12 lg:py-20">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-4 md:py-6 lg:py-10">
         {/* Main Hero Title */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-20 leading-tight">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-10 leading-tight">
           {heroSection.title}
         </h1>
 
@@ -35,7 +35,7 @@ export default function Hero({ heroSection, heroSectionContent }) {
           {/* Features List Section */}
           <section className="space-y-6">
             <h3 className="text-xl md:text-2xl font-bold tracking-wide">
-              Why Tales FM Works
+              {heroSection.subTitle}
             </h3>
 
             <ul className="space-y-3">

@@ -12,7 +12,7 @@ export default async function Page() {
   const data = await getListenToTheWorldContent();
 
   return (
-    <main className="mt-15">
+    <main className="mt-15 space-y-18 ">
       <Hero
         heroSection={data.heroSection}
         heroSectionContent={data.heroSectionContent}
@@ -22,13 +22,17 @@ export default async function Page() {
 
       <WhyTalesFM talesFMData={data.talesFMData} />
 
-      <RadioComparison />
+      <RadioComparison heading={data.comparisonSectionHeading} />
 
-      <Reviews testimonials={data.testimonials} />
+      <Reviews
+        heading={data.testimonialsHeading}
+        subTitle={data.testimonialsSubTitle}
+        testimonials={data.testimonials}
+      />
 
-      <FAQSection faqData={data.faqData} />
+      <FAQSection heading={data.faqSectionHeading} faqData={data.faqData} />
 
-      <FreeRadio freeRadioData ={data.freeRadioData} />
+      <FreeRadio freeRadioData={data.freeRadioData} />
     </main>
   );
 }

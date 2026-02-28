@@ -1,17 +1,16 @@
 "use client";
-export default function MostListenedStations({ stations }) {
+export default function MostListenedStations({ title, subTitle, stations }) {
   return (
-    <section className="bg-black text-white py-16 sm:py-20 md:py-24">
+    <section className="bg-black text-white py-8 sm:py-10 md:py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="max-w-4xl mx-auto space-y-6 mb-12 md:mb-16">
+        <div className="max-w-4xl mx-auto space-y-6 mb-8 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
-            Most Listened American Radio Stations
+            {title}
           </h2>
 
           <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
-            In the world of USA radio stations, here are the most popular radio
-            stations that people love to listen to:
+            {subTitle}
           </p>
         </div>
 
@@ -44,7 +43,7 @@ export default function MostListenedStations({ stations }) {
         </div>
 
         {/* Closing Paragraph */}
-        <div className="max-w-4xl mx-auto mt-12 md:mt-16">
+        <div className="max-w-4xl mx-auto mt-0 md:mt-16">
           <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
             These stations show a diverse listening habit that is divided
             between local, curated content and national, specialized, or

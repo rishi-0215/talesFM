@@ -9,7 +9,7 @@ const StationList = ({ data }: StationListProps) => {
   const { title, description, stations } = data;
 
   return (
-    <section className="py-10 text-white">
+    <section className="py-8 text-white">
       {/* Section Title */}
       <h2 className="text-3xl font-bold mb-4 tracking-tight">{title}</h2>
 

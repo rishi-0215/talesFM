@@ -16,7 +16,7 @@ export default function WhyTalesFM({ talesFMData }) {
         <p className="text-gray-300 text-lg leading-relaxed">
           {talesFMData.description.para2}
         </p>
-        <p className="text-orange-400 font-medium">
+        <p className=" font-medium">
           {talesFMData.description.para3}
         </p>
       </Section>
@@ -29,13 +29,13 @@ export default function WhyTalesFM({ talesFMData }) {
         subtitle="Made for Every Kind of Listener"
         className="max-w-6xl"
       >
-        <p className="text-gray-400 mb-4 text-lg">Tales FM is aimed at:</p>
+        <p className="text-gray-400 mb-4 text-lg">{talesFMData.heading}</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {talesFMData.targetAudience.map((item) => (
             <FeatureItem key={item} title={item} isBullet />
           ))}
         </div>
-        <p className="italic text-gray-500 mt-6">{talesFMData.audienceNote}</p>
+        <p className=" text-gray-500 mt-6">{talesFMData.audienceNote}</p>
       </Section>
 
       {/* Value Proposition Section */}
@@ -71,9 +71,7 @@ export default function WhyTalesFM({ talesFMData }) {
         </div>
 
         <p className="text-xl text-gray-400 ">
-          Whether {"you're"} looking for a global online radio app or a simple
-          radio app without ads, Tales FM brings everything together in one
-          place.
+          {talesFMData.para4}
         </p>
       </Section>
     </main>

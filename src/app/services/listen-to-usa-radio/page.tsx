@@ -14,18 +14,18 @@ export default async function Page() {
  
 
   return (
-    <>
+    <div className="space-y-10" >
       <Hero data={content.heroData} />
       <WhyAmericanRadio data={content.whyAmericanRadioData} />
       <ExploreByGenre
         data={content.exploreSectionData}
         genres={content.genres}
       />
-      <MostListenedRadioStations stations={content.stations} />
-      <BrowseRadioStations cities={content.cities} />
+      <MostListenedRadioStations title={content.stationTitle} subTitle={content.stationSubTitle} stations={content.stations} />
+      <BrowseRadioStations heading={content.citiesHeading} description={content.citiesDescription} cities={content.cities} />
       <HowToStream data={content.howToStreamData} />
-      <FAQ faqData={content.faqData} />
+      <FAQ heading={content.faqSectionHeading} faqData={content.faqData} />
       <DownloadSection data={content.startExploringData} />
-    </>
+    </div>
   );
 }

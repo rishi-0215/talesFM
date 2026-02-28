@@ -1,27 +1,27 @@
 "use client";
 
-
-export default function IndianRadioByCity({ cities }) {
-
+export default function IndianRadioByCity({
+  citySectionHeading,
+  citySectionSubtext,
+  cities,
+}) {
   return (
     <section className="bg-black text-white py-4 sm:py-24 md:py-10">
       <div className="lg:max-w-9/12 md:max-w-10/12 sm:max-w-10/12 mx-auto px-4 sm:px-6">
-
         {/* Header */}
         <div className="space-y-6 mb-14">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-            Indian Radio Stations by City & Region
+            {citySectionHeading}
           </h2>
 
           <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed">
-            You can also find regional voices and city vibes through Indian radio online.
-            A list of popular Indian radio stations by city and voice is as follows:
+            {citySectionSubtext}
           </p>
         </div>
 
         {/* Grid */}
         <div
-  className="
+          className="
     flex gap-6 overflow-x-auto scroll-smooth
     snap-x snap-mandatory
     no-scrollbar
@@ -29,9 +29,7 @@ export default function IndianRadioByCity({ cities }) {
     lg:grid-cols-3 xl:grid-cols-4
     sm:overflow-visible
   "
->
-
-
+        >
           {cities.map((item, index) => (
             <div
               key={index}
@@ -53,21 +51,20 @@ export default function IndianRadioByCity({ cities }) {
               <div className="absolute inset-0 rounded-2xl bg-white/5 opacity-20 pointer-events-none" />
 
               <div className="relative space-y-6">
-
                 {/* Elevated Title Box */}
-                <div className="
+                <div
+                  className="
                   bg-white/10
                   rounded-xl
                   py-4 px-4
                   text-center
                   border border-white/10
-                ">
+                "
+                >
                   <h3 className="text-sm sm:text-base font-semibold">
                     {item.city}
                   </h3>
-                  <p className="text-xs text-gray-400 mt-1">
-                    Radio Stations
-                  </p>
+                  <p className="text-xs text-gray-400 mt-1">Radio Stations</p>
                 </div>
 
                 {/* Station List */}
@@ -81,11 +78,9 @@ export default function IndianRadioByCity({ cities }) {
                     </li>
                   ))}
                 </ul>
-
               </div>
             </div>
           ))}
-
         </div>
       </div>
     </section>
