@@ -12,20 +12,7 @@ import {
   Zap,
 } from "lucide-react";
 
-interface AccordionItem {
-  id: number;
-  label: string;
-  title: string;
-  description: string;
-  icon: string;
-  stations: { name: string }[];
-}
-
-interface AccordionProps {
-  items: AccordionItem[];
-}
-
-const iconMap: Record<string, any> = {
+const iconMap = {
   Music,
   Guitar,
   Mic2,
@@ -35,10 +22,10 @@ const iconMap: Record<string, any> = {
   Zap,
 };
 
-export default function Accordion({ items }: AccordionProps) {
-  const [activeId, setActiveId] = useState<number | null>(null);
+export default function Accordion({ items }) {
+  const [activeId, setActiveId] = (useState < number) | (null > null);
 
-  const toggle = (id: number) => {
+  const toggle = (id) => {
     setActiveId(activeId === id ? null : id);
   };
 
