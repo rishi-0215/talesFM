@@ -23,7 +23,7 @@ const iconMap = {
 };
 
 export default function Accordion({ items }) {
-  const [activeId, setActiveId] = (useState < number) | (null > null);
+  const [activeId, setActiveId] = useState(null);
 
   const toggle = (id) => {
     setActiveId(activeId === id ? null : id);
