@@ -17,7 +17,8 @@ import robotsCollection from "./collections/robots/robots";
 import blog from "./collections/blog/blog";
 import listenRadioOnline from "./collections/services/listenRadioOnline";
 import ListenToTheWorld from "./collections/services/ListenToTheWorld";
-
+import listenToUSARadio from "./collections/services/listenToUSARadio";
+import radioStationsOnline from "./collections/services/radioStationsOnline";
 
 // Pull env variables
 const clientId = process.env.NEXT_PUBLIC_TINA_CLIENT_ID;
@@ -26,7 +27,7 @@ const branch =
   process.env.NEXT_PUBLIC_TINA_BRANCH ||
   process.env.VERCEL_GIT_COMMIT_REF ||
   process.env.HEAD ||
-  "master";
+  "main";
 
 // ⚠️ Fail if required vars missing (prevents silent misconfig in prod)
 if (!clientId || !token || !branch) {
@@ -43,7 +44,7 @@ export default defineConfig({
   branch,
   clientId,
   token,
-  
+
   build: {
     outputFolder: "admin",
     publicFolder: "public",
@@ -89,6 +90,8 @@ export default defineConfig({
       },
       listenRadioOnline,
       ListenToTheWorld,
+      listenToUSARadio,
+      radioStationsOnline,
       privacy,
       aboutus_page,
       contact,

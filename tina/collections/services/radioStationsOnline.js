@@ -7,278 +7,161 @@ const radioStationsOnline = {
     include: "radio-stations-online",
   },
   fields: [
-    // =========================
-    // Main Hero Section
-    // =========================
+
+    // HERO
     {
       type: "object",
       name: "hero",
       label: "Main Hero Section",
       fields: [
-        { type: "string", name: "heading", label: "Heading" },
-        { type: "string", name: "subheading", label: "Subheading" },
-        { type: "string", name: "tagline", label: "Tagline" },
-        {
-          type: "string",
-          name: "description",
-          label: "Description",
-          ui: { component: "textarea" },
-        },
+        { type: "string", name: "heading" },
+        { type: "string", name: "subheading" },
+        { type: "string", name: "tagline" },
+        { type: "string", name: "description", ui: { component: "textarea" } },
         {
           type: "object",
           name: "ctaButtons",
-          label: "CTA Buttons",
           list: true,
-          fields: [{ type: "string", name: "label", label: "Button Label" }],
+          fields: [{ type: "string", name: "label" }],
         },
       ],
     },
 
-    // =========================
-    // Live Radio Stations Section
-    // =========================
+    // LIVE RADIO
     {
       type: "object",
       name: "liveRadioStations",
-      label: "Live Radio Stations Section",
       fields: [
         {
           type: "object",
           name: "title",
-          label: "Title",
           fields: [
-            { type: "string", name: "text", label: "Text" },
-            {
-              type: "string",
-              name: "size",
-              label: "Size",
-              options: ["xl", "2xl", "3xl", "4xl", "5xl", "6xl"],
-            },
-            {
-              type: "string",
-              name: "weight",
-              label: "Weight",
-              options: [
-                "100",
-                "200",
-                "300",
-                "400",
-                "500",
-                "600",
-                "700",
-                "800",
-                "900",
-              ],
-            },
+            { type: "string", name: "text" },
+            { type: "string", name: "size" },
+            { type: "string", name: "weight" },
           ],
         },
         {
           type: "string",
           name: "paragraphs",
-          label: "Paragraphs",
           list: true,
           ui: { component: "textarea" },
         },
       ],
     },
 
-    // =========================
-    // Music Focused Section
-    // =========================
+    // MUSIC SECTION (FIXED)
     {
       type: "object",
       name: "musicFocusedSection",
-      label: "Music Focused Section",
       fields: [
-        { type: "string", name: "title", label: "Title" },
-        {
-          type: "string",
-          name: "description",
-          label: "Description",
-          ui: { component: "textarea" },
-        },
+        { type: "string", name: "title" },
+        { type: "string", name: "text", ui: { component: "textarea" } }, // ✅ added
+        { type: "string", name: "description", ui: { component: "textarea" } },
         {
           type: "object",
           name: "stations",
-          label: "Stations",
           list: true,
-          fields: [{ type: "string", name: "name", label: "Station Name" }],
+          fields: [{ type: "string", name: "name" }],
         },
       ],
     },
 
-    // =========================
-    // Browse Radio Stations
-    // =========================
+    // BROWSE SECTION (FIXED)
     {
       type: "object",
       name: "browseRadioStations",
-      label: "Browse Radio Stations Section",
       fields: [
-        { type: "string", name: "title", label: "Title" },
-        {
-          type: "string",
-          name: "description",
-          label: "Description",
-          ui: { component: "textarea" },
-        },
+        { type: "string", name: "title" },
+        { type: "string", name: "description", ui: { component: "textarea" } },
         {
           type: "object",
           name: "stations",
-          label: "Options",
           list: true,
-          fields: [{ type: "string", name: "name", label: "Option" }],
+          fields: [{ type: "string", name: "name" }],
         },
+        { type: "string", name: "footer", ui: { component: "textarea" } }, // ✅ added
       ],
     },
 
-    // =========================
-    // How Tales FM Works
-    // =========================
+    // HOW IT WORKS
     {
       type: "object",
       name: "howTalesFMWorks",
-      label: "How Tales FM Works",
       fields: [
-        { type: "string", name: "title", label: "Title" },
-        {
-          type: "string",
-          name: "description",
-          label: "Description",
-          ui: { component: "textarea" },
-        },
-        {
-          type: "string",
-          name: "footer",
-          label: "Footer",
-        },
+        { type: "string", name: "title" },
+        { type: "string", name: "description", ui: { component: "textarea" } },
+        { type: "string", name: "footer" },
         {
           type: "object",
           name: "stations",
-          label: "Steps",
           list: true,
-          fields: [{ type: "string", name: "name", label: "Step" }],
+          fields: [{ type: "string", name: "name" }],
         },
       ],
     },
 
-    // =========================
-    // Popular Radio Categories
-    // =========================
+    // POPULAR CATEGORIES (FIXED)
     {
       type: "object",
       name: "popularRadioCategories",
-      label: "Popular Radio Categories",
       fields: [
-        { type: "string", name: "title", label: "Title" },
-        {
-          type: "string",
-          name: "description",
-          label: "Description",
-          ui: { component: "textarea" },
-        },
+        { type: "string", name: "title" },
+        { type: "string", name: "description", ui: { component: "textarea" } },
         {
           type: "object",
           name: "stations",
-          label: "Categories",
           list: true,
-          fields: [{ type: "string", name: "name", label: "Category Name" }],
+          fields: [{ type: "string", name: "name" }],
         },
+        { type: "string", name: "footer", ui: { component: "textarea" } }, // ✅ added
       ],
     },
 
-    // =========================
-    // Smarter Way Section
-    // =========================
+    // SMARTER WAY
     {
       type: "object",
       name: "smarterWay",
-      label: "Why Tales FM Section",
       fields: [
         {
           type: "object",
           name: "header",
-          label: "Header",
           fields: [
             {
               type: "object",
               name: "title",
-              label: "Title",
               fields: [
-                { type: "string", name: "text", label: "Text" },
-                {
-                  type: "string",
-                  name: "size",
-                  label: "Size",
-                  options: ["xl", "2xl", "3xl", "4xl", "5xl", "6xl"],
-                },
-                {
-                  type: "string",
-                  name: "weight",
-                  label: "Weight",
-                  options: [
-                    "100",
-                    "200",
-                    "300",
-                    "400",
-                    "500",
-                    "600",
-                    "700",
-                    "800",
-                    "900",
-                  ],
-                },
+                { type: "string", name: "text" },
+                { type: "string", name: "size" },
+                { type: "string", name: "weight" },
               ],
             },
             {
               type: "string",
               name: "paragraphs",
-              label: "Paragraphs",
               list: true,
               ui: { component: "textarea" },
             },
           ],
         },
+        { type: "string", name: "text" },
         {
           type: "object",
           name: "providedValues",
-          label: "Provided Values",
           list: true,
           fields: [
             {
               type: "object",
               name: "title",
-              label: "Value Title",
               fields: [
-                { type: "string", name: "text", label: "Text" },
-                {
-                  type: "string",
-                  name: "size",
-                  label: "Size",
-                  options: ["xl", "2xl", "3xl", "4xl", "5xl", "6xl"],
-                },
-                {
-                  type: "string",
-                  name: "weight",
-                  label: "Weight",
-                  options: [
-                    "100",
-                    "200",
-                    "300",
-                    "400",
-                    "500",
-                    "600",
-                    "700",
-                    "800",
-                    "900",
-                  ],
-                },
+                { type: "string", name: "text" },
+                { type: "string", name: "size" },
+                { type: "string", name: "weight" },
               ],
             },
             {
               type: "string",
               name: "paragraphs",
-              label: "Paragraphs",
               list: true,
               ui: { component: "textarea" },
             },
@@ -287,48 +170,37 @@ const radioStationsOnline = {
       ],
     },
 
-    // =========================
-    // FAQ
-    // =========================
+    // FAQ HEADING (FIXED)
+    {
+      type: "string",
+      name: "faqSectionHeading",
+    },
+
+    // FAQ ITEMS
     {
       type: "object",
       name: "faq",
-      label: "FAQ",
       list: true,
       fields: [
-        { type: "string", name: "question", label: "Question" },
-        {
-          type: "string",
-          name: "answer",
-          label: "Answer",
-          ui: { component: "textarea" },
-        },
+        { type: "string", name: "question" },
+        { type: "string", name: "answer", ui: { component: "textarea" } },
       ],
     },
 
-    // =========================
-    // Bottom Hero
-    // =========================
+    // BOTTOM HERO
     {
       type: "object",
       name: "radioHero",
-      label: "Bottom Hero Section",
       fields: [
-        { type: "string", name: "heading", label: "Heading" },
-        { type: "string", name: "subheading", label: "Subheading" },
-        {
-          type: "string",
-          name: "description",
-          label: "Description",
-          ui: { component: "textarea" },
-        },
+        { type: "string", name: "heading" },
+        { type: "string", name: "subheading" },
+        { type: "string", name: "description", ui: { component: "textarea" } },
         {
           type: "object",
           name: "button",
-          label: "Button",
           fields: [
-            { type: "string", name: "label", label: "Button Label" },
-            { type: "string", name: "ariaLabel", label: "Aria Label" },
+            { type: "string", name: "label" },
+            { type: "string", name: "ariaLabel" },
           ],
         },
       ],

@@ -10,23 +10,13 @@ function sectionContentFields() {
           type: "string",
           name: "size",
           label: "Size",
-          options: ["xl", "2xl", "3xl", "4xl", "5xl", "6xl"],
+          options: ["xl","2xl","3xl","4xl","5xl","6xl"],
         },
         {
           type: "string",
           name: "weight",
           label: "Weight",
-          options: [
-            "100",
-            "200",
-            "300",
-            "400",
-            "500",
-            "600",
-            "700",
-            "800",
-            "900",
-          ],
+          options: ["100","200","300","400","500","600","700","800","900"],
         },
       ],
     },
@@ -49,9 +39,8 @@ const homePage = {
     include: "listen-to-the-world",
   },
   fields: [
-    // =========================
-    // HERO SECTION CONTENT
-    // =========================
+
+    // HERO CONTENT
     {
       type: "object",
       name: "heroSectionContent",
@@ -59,9 +48,7 @@ const homePage = {
       fields: sectionContentFields(),
     },
 
-    // =========================
-    // HERO FEATURE BLOCK
-    // =========================
+    // HERO FEATURES
     {
       type: "object",
       name: "heroSection",
@@ -78,13 +65,16 @@ const homePage = {
       ],
     },
 
-    // =========================
     // FAQ
-    // =========================
+    {
+      type: "string",
+      name: "faqSectionHeading",
+      label: "FAQ Section Heading",
+    },
     {
       type: "object",
       name: "faqData",
-      label: "FAQs",
+      label: "FAQ Items",
       list: true,
       fields: [
         { type: "string", name: "question", label: "Question" },
@@ -97,17 +87,25 @@ const homePage = {
       ],
     },
 
-    // =========================
-    // TESTIMONIAL SECTION HEADER
-    // =========================
+    // TESTIMONIAL HEADINGS (separate)
+    {
+      type: "string",
+      name: "testimonialsHeading",
+      label: "Testimonials Heading",
+    },
+    {
+      type: "string",
+      name: "testimonialsSubTitle",
+      label: "Testimonials Sub Title",
+    },
+
+    // TESTIMONIAL ITEMS
     {
       type: "object",
       name: "testimonials",
       label: "Testimonials",
       list: true,
       fields: [
-        { type: "string", name: "heading", label: "Section Heading" },
-        { type: "string", name: "subTitle", label: "Section Sub Title" },
         {
           type: "string",
           name: "quote",
@@ -119,9 +117,7 @@ const homePage = {
       ],
     },
 
-    // =========================
-    // TALES FM MAIN DATA
-    // =========================
+    // TALES FM DATA
     {
       type: "object",
       name: "talesFMData",
@@ -135,30 +131,10 @@ const homePage = {
           name: "description",
           label: "Description",
           fields: [
-            {
-              type: "string",
-              name: "para1",
-              label: "Paragraph 1",
-              ui: { component: "textarea" },
-            },
-            {
-              type: "string",
-              name: "para2",
-              label: "Paragraph 2",
-              ui: { component: "textarea" },
-            },
-            {
-              type: "string",
-              name: "para3",
-              label: "Paragraph 3",
-              ui: { component: "textarea" },
-            },
-            {
-              type: "string",
-              name: "para4",
-              label: "Paragraph 4",
-              ui: { component: "textarea" },
-            },
+            { type: "string", name: "para1", ui: { component: "textarea" } },
+            { type: "string", name: "para2", ui: { component: "textarea" } },
+            { type: "string", name: "para3", ui: { component: "textarea" } },
+            { type: "string", name: "para4", ui: { component: "textarea" } },
           ],
         },
 
@@ -218,20 +194,14 @@ const homePage = {
       ],
     },
 
-    // =========================
-    // COMPARISON SECTION
-    // =========================
+    // COMPARISON (single string)
     {
-      type: "object",
-      name: "comparisonSection",
-      label: "Comparison Section",
-      list: true,
-      fields: [{ type: "string", name: "heading", label: "Heading" }],
+      type: "string",
+      name: "comparisonSectionHeading",
+      label: "Comparison Section Heading",
     },
 
-    // =========================
     // FREE RADIO CTA
-    // =========================
     {
       type: "object",
       name: "freeRadioData",

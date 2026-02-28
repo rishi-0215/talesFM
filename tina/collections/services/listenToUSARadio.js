@@ -7,9 +7,8 @@ const listenToUSARadio = {
     include: "listen-to-usa-radio",
   },
   fields: [
-    // =========================
-    // Hero Section
-    // =========================
+
+    // HERO
     {
       type: "object",
       name: "heroData",
@@ -28,9 +27,7 @@ const listenToUSARadio = {
       ],
     },
 
-    // =========================
-    // Why American Radio
-    // =========================
+    // WHY AMERICAN RADIO
     {
       type: "object",
       name: "whyAmericanRadioData",
@@ -63,9 +60,7 @@ const listenToUSARadio = {
       ],
     },
 
-    // =========================
-    // Explore Section
-    // =========================
+    // EXPLORE
     {
       type: "object",
       name: "exploreSectionData",
@@ -79,17 +74,11 @@ const listenToUSARadio = {
           list: true,
           ui: { component: "textarea" },
         },
-        {
-          type: "string",
-          name: "highlightText",
-          label: "Highlight Text",
-        },
+        { type: "string", name: "highlightText", label: "Highlight Text" },
       ],
     },
 
-    // =========================
-    // Genres
-    // =========================
+    // GENRES
     {
       type: "object",
       name: "genres",
@@ -118,9 +107,20 @@ const listenToUSARadio = {
       ],
     },
 
-    // =========================
-    // Most Listened Stations
-    // =========================
+    // MOST LISTENED SECTION HEADINGS
+    {
+      type: "string",
+      name: "stationTitle",
+      label: "Station Section Title",
+    },
+    {
+      type: "string",
+      name: "stationSubTitle",
+      label: "Station Section Sub Title",
+      ui: { component: "textarea" },
+    },
+
+    // MOST LISTENED STATIONS
     {
       type: "object",
       name: "stations",
@@ -137,9 +137,20 @@ const listenToUSARadio = {
       ],
     },
 
-    // =========================
-    // Cities
-    // =========================
+    // CITY SECTION HEADINGS
+    {
+      type: "string",
+      name: "citiesHeading",
+      label: "Cities Section Heading",
+    },
+    {
+      type: "string",
+      name: "citiesDescription",
+      label: "Cities Section Description",
+      ui: { component: "textarea" },
+    },
+
+    // CITIES
     {
       type: "object",
       name: "cities",
@@ -156,9 +167,7 @@ const listenToUSARadio = {
       ],
     },
 
-    // =========================
-    // How To Stream
-    // =========================
+    // HOW TO STREAM
     {
       type: "object",
       name: "howToStreamData",
@@ -191,9 +200,14 @@ const listenToUSARadio = {
       ],
     },
 
-    // =========================
-    // FAQ
-    // =========================
+    // FAQ SECTION HEADING
+    {
+      type: "string",
+      name: "faqSectionHeading",
+      label: "FAQ Section Heading",
+    },
+
+    // FAQ ITEMS
     {
       type: "object",
       name: "faqData",
@@ -210,9 +224,7 @@ const listenToUSARadio = {
       ],
     },
 
-    // =========================
-    // Start Exploring
-    // =========================
+    // START EXPLORING
     {
       type: "object",
       name: "startExploringData",
