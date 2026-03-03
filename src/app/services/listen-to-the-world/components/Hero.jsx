@@ -3,22 +3,12 @@ import UnalignedBody from "../../components/UnalignedBody";
 
 export default function Hero({ heroSection, heroSectionContent }) {
   return (
-    <div className="relative bg-black text-white selection:bg-white/20 overflow-hidden">
+    <div className="relative  text-white selection:bg-white/20 overflow-hidden">
       {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full blur-lg object-cover"
-      >
-        <source src="/bgAnimation.webm" type="video/webm" />
-        <source src="/bgAnimation.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      
 
       {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 /60"></div>
 
       {/* Main Container */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-4 md:py-6 lg:py-10">

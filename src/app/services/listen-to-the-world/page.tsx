@@ -7,12 +7,15 @@ import RadioComparison from "./components/RadioComparison";
 import Reviews from "./components/Reviews";
 import FAQSection from "../components/FAQSection";
 import FreeRadio from "./components/FreeRadio";
+import BackgroundVideo from "../components/Background";
 
 export default async function Page() {
   const data = await getListenToTheWorldContent();
 
   return (
     <main className="mt-15 space-y-18 ">
+      {/* Background Video */}
+      <BackgroundVideo />
       <Hero
         heroSection={data.heroSection}
         heroSectionContent={data.heroSectionContent}

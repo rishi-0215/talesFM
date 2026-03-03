@@ -1,7 +1,7 @@
 "use client";
 export default function MostListenedStations({ title, subTitle, stations }) {
   return (
-    <section className="bg-black text-white py-8 sm:py-10 md:py-12">
+    <section className=" text-white py-8 sm:py-10 md:py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="max-w-4xl mx-auto space-y-6 mb-8 md:mb-16">

@@ -35,7 +35,7 @@ export default function CTASection({ freeRadioData }) {
   };
 
   return (
-    <div className="max-h-screen bg-black flex items-center justify-center px-4 py-8">
+    <div className="max-h-screen  flex items-center justify-center px-4 py-8">
       <div className="max-w-4xl w-full bg-zinc-900/40 border border-zinc-800 rounded-3xl p-12 md:p-16 backdrop-blur-sm">
         <div className="text-center space-y-8">
           {/* Main Heading */}

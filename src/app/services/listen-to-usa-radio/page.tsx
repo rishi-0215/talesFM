@@ -8,6 +8,7 @@ import HowToStream from "./components/HowToStream";
 import FAQ from "../components/FAQSection";
 import DownloadSection from "./components/DownloadSection";
 import { getListenToUsaRadio } from "../../../lib/getListenToUsaRadioContent";
+import BackgroundVideo from "../components/Background";
 
 export default async function Page() {
   const content = await getListenToUsaRadio();
@@ -15,6 +16,8 @@ export default async function Page() {
 
   return (
     <div className="space-y-10" >
+      {/* Background Video */}
+      <BackgroundVideo />
       <Hero data={content.heroData} />
       <WhyAmericanRadio data={content.whyAmericanRadioData} />
       <ExploreByGenre

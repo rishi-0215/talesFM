@@ -11,13 +11,16 @@ import FaqSection from "./components/FaqSection";
 import SimpleRadioStation from "./components/SimpleRadioStation";
 import { SectionContainer } from "../components/SectionContainer";
 import { getListenRadioStationsOnlineContent } from "../../../lib/getRadioStationsOnlineContent";
+import BackgroundVideo from "../components/Background";
 
 export default async function Page() {
   const content = await getListenRadioStationsOnlineContent();
   console.log(content);
 
   return (
-    <main className="bg-black text-white space-y-18 ">
+    <main className=" text-white space-y-18 ">
+      {/* Background Video */}
+      <BackgroundVideo />
       <Hero heroData={content.hero} />
 
       <SectionContainer>
@@ -31,7 +34,7 @@ export default async function Page() {
       </SectionContainer>
 
       <BrowseYourWay data={content.browseRadioStations} />
-      <HowTalesFmWork  data={content.howTalesFMWorks} />
+      <HowTalesFmWork data={content.howTalesFMWorks} />
       <PopularRadioCategories data={content.popularRadioCategories} />
 
       <FeedbackSection />

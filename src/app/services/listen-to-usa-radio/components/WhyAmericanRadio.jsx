@@ -4,7 +4,7 @@ export default function WhyAmericanRadio({ data }) {
   const content = data;
 
   return (
-    <section className="bg-black text-white py-4 sm:py-10 md:py-8">
+    <section className=" text-white py-4 sm:py-10 md:py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="max-w-4xl space-y-4 sm:space-y-4">

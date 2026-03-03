@@ -18,7 +18,7 @@ export default function BrowseByCity({ description, heading, cities }) {
   };
 
   return (
-    <section className="bg-black text-white py-8 sm:py-10 md:py-12">
+    <section className=" text-white py-8 sm:py-10 md:py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="max-w-4xl space-y-6 mb-10 md:mb-12">
@@ -54,10 +54,11 @@ export default function BrowseByCity({ description, heading, cities }) {
             ref={scrollRef}
             className="
               flex gap-4 sm:gap-6
-              overflow-x-auto scroll-smooth
+              overflow-x-hidden scroll-smooth
               snap-x snap-mandatory
               no-scrollbar
               md:overflow-hidden
+              bg-transparent
             "
           >
             {cities.map((city, index) => (

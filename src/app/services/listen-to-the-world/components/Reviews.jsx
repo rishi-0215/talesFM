@@ -13,9 +13,9 @@ export default function Reviews({ heading, subTitle, testimonials }) {
           className="overflow-hidden"
           style={{
             maskImage:
-              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+              "linear-gradient(to right, blur, black 20%, black 80%, blur)",
             WebkitMaskImage:
-              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+              "linear-gradient(to right, blur, black 20%, black 80%, blur)",
           }}
         >
           <InfiniteMovingCardsUsage testimonials={testimonials} />

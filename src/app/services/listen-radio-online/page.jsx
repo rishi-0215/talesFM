@@ -6,12 +6,17 @@ import MultiSection from "./components/MultiSection";
 import FAQSection from "../components/FAQSection";
 
 import { getListenRadioOnlineContent } from "../../../lib/getListenRadioOnlineContent";
+import BackgroundVideo from "../components/Background";
 
 export default async function Page() {
   const content = await getListenRadioOnlineContent();
-  console.log(content.faqSectionHeading);
+
   return (
-    <div className="space-y-18" > 
+    <div className="space-y-18">
+      {/* Background Video */}
+
+      <BackgroundVideo />
+
       <Hero
         heroSectionContent={content.whyStillRadio}
         heroSection={content.indianRadioData}

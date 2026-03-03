@@ -22,7 +22,7 @@ export default function StartExploring({ data }) {
     window.open(GOOGLE_PLAY_URL, "_blank");
   };
   return (
-    <section className="bg-black text-white py-12">
+    <section className=" text-white py-12">
       <div className="max-w-4xl mx-auto px-6 text-center space-y-8">
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-bold">

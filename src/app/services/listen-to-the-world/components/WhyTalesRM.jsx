@@ -4,7 +4,7 @@ import { FeatureItem } from "./FeatureItem";
 
 export default function WhyTalesFM({ talesFMData }) {
   return (
-    <main className="min-h-screen  bg-black text-white font-sans selection:bg-orange-500/30">
+    <main className="min-h-screen   text-white font-sans selection:bg-orange-500/30">
       <Section
         title="What Is Tales FM Radio App?"
         subtitle="More Than a Radio App — It's Your Global Audio Hub"

@@ -13,16 +13,7 @@ export default async function Hero() {
         <Body key={i} data={data} />
       ))}
 
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute -z-9999 inset-0 w-full h-full blur-lg object-cover"
-      >
-        <source src="/bgAnimation.webm" type="video/webm" />
-        <source src="/bgAnimation.mp4" type="video/mp4" />
-      </video>
+      
     </div>
   );
 }

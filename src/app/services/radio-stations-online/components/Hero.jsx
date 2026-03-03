@@ -34,20 +34,10 @@ export default function RadioStationsHero({ heroData }) {
     window.open(HOME_PAGE_LINk, "_blank");
   };
   return (
-    <section className="relative min-h-screen max-w-100vw bg-black text-white flex items-center justify-center px-6 py-10 overflow-hidden">
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 blur-lg w-full h-full object-cover"
-      >
-        <source src="/bgAnimation.webm" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <section className="relative min-h-screen max-w-100vw  text-white flex items-center justify-center px-6 py-10 overflow-hidden">
+      
 
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 /50"></div>
 
       <div className="relative z-10 max-w-5xl mx-auto text-center space-y-3">
         {/* Main Heading */}

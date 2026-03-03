@@ -7,7 +7,7 @@ export default function ExploreIndianRadioByCategory({
   stations,
 }) {
   return (
-    <section className="bg-black text-white py-4 sm:py-24 md:py-2">
+    <section className=" text-white py-4 sm:py-24 md:py-2">
       <div className="lg:max-w-7xl md:max-w-10/12 sm:max-w-10/12 mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="max-w-3xl space-y-6 mb-14">

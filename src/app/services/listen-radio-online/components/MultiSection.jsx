@@ -8,7 +8,7 @@ export default function MultiSection({
   nriSection,
 }) {
   return (
-    <main className="bg-black text-white">
+    <main className=" text-white">
       <ListInfoSection data={simpleSteps} />
       <ListInfoSection data={benefits} />
       <ParagraphInfoSection data={nriSection} />

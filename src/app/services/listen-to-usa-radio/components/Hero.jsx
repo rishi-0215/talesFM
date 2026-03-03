@@ -35,20 +35,10 @@ export default function Hero({ data }) {
   };
 
   return (
-    <section className="relative bg-black text-white mt-16 md:mt-20 overflow-hidden">
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover blur-lg"
-      >
-        <source src="/bgAnimation.webm" />
-      </video>
+    <section className="relative  text-white mt-16 md:mt-20 overflow-hidden">
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0" />
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-10 md:py-12">

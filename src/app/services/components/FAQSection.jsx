@@ -13,7 +13,7 @@ export default function FAQ({ heading,faqData }) {
   return (
     // min-h-[50vh] ensures it's not too small, but we remove h-dvh 
     // to prevent forcing it to be 100% height if it doesn't need to be.
-    <div className="w-full bg-black text-white px-4 py-8 flex flex-col items-center">
+    <div className="w-full  text-white px-4 py-8 flex flex-col items-center">
       <div className="max-w-5xl mx-auto w-full flex flex-col">
         
         <h1 className="text-3xl md:text-5xl font-bold text-center mb-6 shrink-0">

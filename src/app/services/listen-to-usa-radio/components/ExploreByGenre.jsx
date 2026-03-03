@@ -4,7 +4,7 @@ import Accordion from "./Accordion";
 export default function ExploreByGenre({ data, genres }) {
   const exploreSectionData = data;
   return (
-    <section className="bg-black text-white py-10 md:py-12">
+    <section className=" text-white py-10 md:py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="space-y-6 mb-10 md:mb-8 max-w-3xl">
           {/* Heading */}
