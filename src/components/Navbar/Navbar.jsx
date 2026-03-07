@@ -327,7 +327,7 @@ const Navbar = () => {
       position_xy: `${e.clientX},${e.clientY}`,
       sticky: isSticky,
     });
-    window.open("https://listen.talesfm.com/Login","_blank")
+    window.open("https://listen.talesfm.com/Login", "_blank");
   };
 
   const handleGetAppClick = (e) => {
@@ -356,6 +356,9 @@ const Navbar = () => {
     });
   };
 
+  useEffect(() => {
+    if (!mobileOpen) setMobileServicesOpen(false);
+  }, [mobileOpen]);
   return (
     <>
       <nav
@@ -492,8 +495,9 @@ const Navbar = () => {
 
               <div
                 ref={pillRef}
-                className="relative z-[220] mx-auto overflow-hidden rounded-[22px] backdrop-blur-xl bg-zinc-600/20 ring-1 ring-white/10 transition-[box-shadow]"
-                style={{ height: 42 }}
+                className={`relative z-[220] mx-auto overflow-hidden rounded-[22px] backdrop-blur-xl bg-zinc-600/20 ring-1 ring-white/10 transition-all duration-300 ${
+                  mobileOpen ? "max-h-[500px]" : "max-h-[42px]"
+                }`}
               >
                 {/* Collapsed row */}
                 <div
@@ -580,7 +584,9 @@ const Navbar = () => {
                 {/* Expanding content */}
                 <div
                   ref={contentRef}
-                  style={{ display: "none" }}
+                  style={{
+                    display: "block",
+                  }}
                   className="px-4 pb-4 pt-1.5  "
                 >
                   <div
@@ -615,43 +621,40 @@ const Navbar = () => {
                     )}
                     {/* MOBILE SERVICES */}
                     <div className="flex flex-col items-center gap-2">
-                      <button
-                        onClick={() => setMobileServicesOpen((v) => !v)}
-                        className="text-[15px]  font-medium text-white/90 hover:text-white flex items-center gap-1"
+                      Services
+                      <svg
+                        className={`w-4 h-4 transition-transform ${
+                          mobileServicesOpen ? "rotate-180" : ""
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
                       >
-                        Services
-                        <svg
-                          className={`w-4 h-4 transition-transform ${
-                            mobileServicesOpen ? "rotate-180" : ""
-                          }`}
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      </button>
-
-                      {mobileServicesOpen &&
-                        SERVICES.map((service) => (
-                          <Link
-                            key={service.text}
-                            href={`/services/${service.route}`}
-                            className="text-sm text-white/80 hover:text-white transition"
-                            onClick={() => {
-                              setMobileServicesOpen(false);
-                              setMobileOpen(false);
-                              document.body.style.overflow = "";
-                            }}
-                          >
-                            {service.text}
-                          </Link>
-                        ))}
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                      {
+                        <div className="mt-2 flex flex-col items-center gap-3 rounded-xl py-3 ">
+                          {SERVICES.map((service) => (
+                            <Link
+                              key={service.text}
+                              href={`/services/${service.route}`}
+                              className="text-sm text-white/80 hover:text-white transition"
+                              onClick={() => {
+                                setMobileServicesOpen(false);
+                                setMobileOpen(false);
+                                document.body.style.overflow = "";
+                              }}
+                            >
+                              {service.text}
+                            </Link>
+                          ))}
+                        </div>
+                      }
                     </div>
 
                     {/* Mobile CTAs */}

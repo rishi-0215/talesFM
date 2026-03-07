@@ -33,6 +33,7 @@ export default function IndianRadioByLanguage({ languageSection, languages }) {
             <div
               key={index}
               className="
+                flex flex-col h-75
                 group relative
                 min-w-[85%] sm:min-w-0
                 snap-start

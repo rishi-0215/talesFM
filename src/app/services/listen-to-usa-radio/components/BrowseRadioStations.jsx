@@ -54,10 +54,10 @@ export default function BrowseByCity({ description, heading, cities }) {
             ref={scrollRef}
             className="
               flex gap-4 sm:gap-6
-              overflow-x-hidden scroll-smooth
+              overflow-x-auto md:overflow-hidden
+              scroll-smooth
               snap-x snap-mandatory
               no-scrollbar
-              md:overflow-hidden
               bg-transparent
             "
           >
