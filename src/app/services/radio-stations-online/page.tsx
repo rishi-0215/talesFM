@@ -15,7 +15,7 @@ import BackgroundVideo from "../components/Background";
 
 export default async function Page() {
   const content = await getListenRadioStationsOnlineContent();
-  console.log(content);
+  
 
   return (
     <main className=" text-white space-y-18 ">
